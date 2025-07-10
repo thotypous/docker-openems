@@ -7,6 +7,6 @@ RUN echo 'Server = https://mirror.ufscar.br/archlinux/$repo/os/$arch' > /etc/pac
     && pacman --noconfirm --noprogressbar -U 'https://mirror.ufscar.br/chaotic-aur/chaotic-aur/chaotic-keyring.pkg.tar.zst' \
     && echo -e '[chaotic-aur]\nServer = https://mirror.ufscar.br/$repo/$repo/$arch' >> /etc/pacman.conf \
     && pacman -Syyu --noconfirm --noprogressbar --quiet \
-    && pacman -S --noconfirm --noprogressbar --quiet openmpi openems-git csxcad-git ttf-dejavu qcsxcad-git appcsxcad-git python-openems-git python-csxcad-git python-matplotlib \
+    && pacman -S --noconfirm --noprogressbar --quiet openmpi openems-git csxcad-git ttf-dejavu tk qcsxcad-git appcsxcad-git python-openems-git python-csxcad-git python-matplotlib \
     && rm -rf /var/lib/pacman/sync/* \
     && rm -rf /var/cache/pacman/*
